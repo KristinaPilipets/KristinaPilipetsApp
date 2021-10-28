@@ -2,7 +2,7 @@ from random import*
 print("Камень, ножницы, бумага")
 print(" Камень >> 1","\n","Ножницы >> 2","\n","Бумага >> 3")
 ans=""
-while type(ans) != int:
+while ans not in [1,2,3]:
 	try:
 		ans=int(input("Выберите камень, ножницы или бумага"))
 	except:
@@ -28,5 +28,20 @@ elif a==3 and ans==2:
 	win="Вы победили"
 else:
 	win="Нет такого варианта"
-print(f"компьютер выбрал {a}, вы выбрали {ans}")
+
+if a==1:
+	b="камень"
+elif a==2:
+	b="ножницы"
+elif a==3:
+	b="бумага"
+
+if ans==1:
+	c="камень"
+elif ans==2:
+	c="ножницы"
+elif ans==3:
+	c="бумага"
+
+print(f"компьютер выбрал {b}, вы выбрали {c}")
 print(win)
