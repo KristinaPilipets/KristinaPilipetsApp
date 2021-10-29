@@ -22,8 +22,6 @@ while True:
 	except:
 		ValueError
 
-print("Если вы хотите закончить игру нажмите q <и если хотите продолжить нажмите любую клавишу>")
-
 while True:
 	print("продолжить играть - enter; прекратить играть - esc")
 	if read_key()=="esc":
@@ -128,13 +126,76 @@ elif cho==2:
 	print(f"игрок 1 выиграл {wina} раза, игрок 2 выиграл {winans} раза")
 print()
 print("--------------------------")
+while True:
+	print("продолжить играть - 1; закончить играть - 2")
+	if read_key()=="2":
+		break
+	else:
+		print("компьютеры играют в камень, ножницы, бумага")
+		rob1=0
+		rob2=0
+		rob3=0
+		a=randint(1,3)
+		b=randint(1,3)
+		if a==1 and b==1:
+			win="ничья"
+			rob3+=1
+		elif a==2 and b==2:
+			win="ничья"
+			rob3+=1
+		elif a==3 and b==3:
+			win="ничья"
+			rob3+=1
+		elif a==1 and b==2:
+			win="Бот 1 победил"
+			rob1+=1
+		elif a==1 and b==3:
+			win="Бот 2 победил"
+			rob2+=1
+		elif a==2 and b==1:
+			win="Бот 2 победил"
+			rob2+=1
+		elif a==2 and b==3:
+			win="Бот 1 победил"
+			rob1+=1
+		elif a==3 and b==1:
+			win="Бот 1 победил"
+			rob1+=1
+		elif a==3 and b==2:
+			win="Бот 1 победил"
+			rob1+=1
+
+		if a==1:
+			d="камень"
+		elif a==2:
+			d="ножницы"
+		elif a==3:
+			d="бумага"
+
+		if b==1:
+			c="камень"
+		elif b==2:
+			c="ножницы"
+		elif b==3:
+			c="бумага"
+
+		print(f"компьютер 1 выбрал {d}, комптютер 2 выбрал {c}")
+		print(win)
+print (f"компьютер 1 выиграл {rob1} раз, комптютер 2 выиграл {rob2} раз")
+print("--------------------------")
 print()
+m=0
+while m not in [1,2]:
+	try:
+		m=int(input("Kellega mängimine?\n1-botid \n2-robotiga"))
+	except:
+		ValueError
 v1=["Kivi","Käärid","Paber"]
 v2=["Kivi","Käärid","Paber"]
 if m==1:
 	while True:
-		print("kas mängime? esc - välja, enter - mängimine")
-		if read_key()=="esc":
+		print("kas mängime? q - välja, enter - mängimine")
+		if read_key()=="q":
 			break
 		elif read_key()=="enter":
 			p1=choice(v1)
@@ -147,3 +208,6 @@ if m==1:
 				print("Võitis 1")
 			else:
 				print("Võitis 2")
+if m==2:
+	while 1:
+		pass
