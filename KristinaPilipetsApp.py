@@ -14,10 +14,10 @@ while True:
 	try:
 		print("Выберите вариант игры нажав клавишу 1 или 2 ")
 		if read_key()=="1":
-			choice=1
+			cho=1
 			break
 		elif read_key()=="2":
-			choice=2
+			cho=2
 			break
 	except:
 		ValueError
@@ -43,9 +43,9 @@ while True:
 					break
 			except:
 				ValueError
-		if choice==1:
+		if cho==1:
 			a=randint(1,3)
-		elif choice==2:
+		elif cho==2:
 			print()
 			while True:
 				try:
@@ -115,16 +115,16 @@ while True:
 		elif int(ans)==3:
 			c="бумага"
 		print()
-		if choice==1:
+		if cho==1:
 			print(f"компьютер выбрал {b}, вы выбрали {c}")
-		elif choice==2:
+		elif cho==2:
 			print(f"игрок 1 выбрал {b}, игрок 2 выбрал {c}")
 		print()
 
 print("игра окончена")
-if choice==1:
+if cho==1:
 	print(f"компьютер выиграл {wina} раза, вы выиграли {winans} раза, ничья {f}")
-elif choice==2:
+elif cho==2:
 	print(f"игрок 1 выиграл {wina} раза, игрок 2 выиграл {winans} раза")
 print()
 print("--------------------------")
