@@ -19,3 +19,4 @@ def arithmetic(a: float,b:float,c:str):
 		r=a/b
 	else:
 		print("Неизвестная операция")
+	return 
