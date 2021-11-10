@@ -9,4 +9,13 @@ def arithmetic(a: float,b:float,c:str):
 	:param str c: aritmeetiline tehing
 	:rtype float:
 	"""
-	
+	if c=="+":
+		r=a+b
+	elif c=="-":
+		r=a-b
+	elif c=="*":
+		r=a*b
+	elif c=="/":
+		r=a/b
+	else:
+		print("Неизвестная операция")
