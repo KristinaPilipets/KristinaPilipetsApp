@@ -15,5 +15,5 @@ while True:
 	elif v.upper()=="S":
 		print("square")
 		ans=square(float(input("Сторона квадрата: ")))
-		print(ans) 
+		print(ans)
 		

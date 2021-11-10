@@ -45,5 +45,5 @@ def square(side:float):
 	P=side*4
 	S=side**2
 	D=sqrt(2*side**2)
-	ans=(f"P={P}; S={S}; D=",round(D,2))
+	ans=(f"P={P}; S={S}; D="+str(round(D,2)))
 	return ans
